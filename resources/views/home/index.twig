@@ -1,51 +1,11 @@
 {% extends 'app.twig' %}
 
 {% block style %}
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css">
 {% endblock %}
 
 {% block content %}
-
-    <table id="employeeAttend" class="display" style="width:100%;">
-        <thead>
-        <tr>
-            <th>Employee ID</th>
-            <th>Full Name</th>
-            <th>Date</th>
-            <th>Normal Hours</th>
-            <th>OT Hours</th>
-        </tr>
-        </thead>
-    </table>
+    <p>Hello, please refer to Slim documentation</p>
 {% endblock %}
 
 {% block script %}
-<script charset="utf8" src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-<script charset="utf8"
-        src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
-<script>
-    let table = $('#employeeAttend').DataTable({
-        "ajax": {
-            "url": "/employeeAttend",
-        },
-        "processing": true,
-        "serverSide": true,
-        "columns": [
-            {"data": "emp_id"},
-            {
-                "width": "30%",
-                "data": "last_name_2_c"
-            },
-            {"data": "date"},
-            {"data": "normal_hours"},
-            {"data": "ot_hours"},
-
-        ],
-        "language": {
-            search: '<i class="fa fa-filter" aria-hidden="true">Search</i>',
-            searchPlaceholder: 'Enter Employee ID'
-        },
-    });
-
-</script>
 {% endblock %}
