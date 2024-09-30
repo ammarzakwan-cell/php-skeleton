@@ -6,7 +6,6 @@ use Psr\Http\Message\{
     ServerRequestInterface as Request,
     ResponseInterface as Response
 };
-use Throwable;
 
 class HomeController extends Controller
 {
